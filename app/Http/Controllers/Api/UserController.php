@@ -172,11 +172,6 @@ class UserController extends Controller
     public function locations()
     {
         $tzList = DateTimeZone::listIdentifiers(DateTimeZone::ALL);
-        $mailApi = Http::post('https://email-service.digitalenvision.com.au/send-email', [
-            'email'=> "sofiullah.work@gmail.com",
-            'message'=> "Hey, Muhammad it's your birthday."
-        ]);
-        dd($mailApi->status());
         return response()->json($tzList, 200);
     }
 }
