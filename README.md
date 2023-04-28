@@ -6,7 +6,7 @@
 - Run ```cd /this-cloned-repository/path``` 
 - Run ```composer install```
 - Run ```composer dumpautoload```
-- Run ```cp .env.example .env``` then change configuration on your copied .env file (check below for example)
+- Run ```cp .env.example .env``` then change configuration on your copied .env file
 - Run ```php artisan key:generate```
 - Run ```php artisan migrate```
 
