@@ -12,7 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('app:resend-message')->hourly()->runInBackground()->withoutOverlapping(10);
+        $schedule->command('app:birthday-message')->everyMinute()->runInBackground()->withoutOverlapping(10);
     }
 
     /**
